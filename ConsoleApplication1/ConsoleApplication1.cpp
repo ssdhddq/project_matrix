@@ -91,7 +91,7 @@ unsigned countValueInCol(int** mas, unsigned n, unsigned m, int value, unsigned 
 // основная программа
 int main()
 {
-	int** mas = nullptr, n = 3, m = 3;
+	int** mas = nullptr, n = 4, m = 4;
 
 	createMatrix(&mas, n, m);
 	inputMatrix(&mas, n, m);
