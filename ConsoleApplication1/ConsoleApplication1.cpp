@@ -59,7 +59,7 @@ void deleteMatrix(int*** mas, unsigned n) {
 // основная программа
 int main()
 {
-	int** mas = nullptr, n = 2, m = 2;
+	int** mas = nullptr, n = 3, m = 3;
 
 	createMatrix(&mas, n, m);
 	inputMatrix(&mas, n, m);
