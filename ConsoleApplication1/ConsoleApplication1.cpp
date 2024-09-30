@@ -56,7 +56,7 @@ void deleteMatrix(int*** mas, unsigned n) {
 	mas = nullptr;
 }
 
-// основная пронрамма
+// основная программа
 int main()
 {
 	int** mas = nullptr, n = 2, m = 2;
