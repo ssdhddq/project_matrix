@@ -56,6 +56,38 @@ void deleteMatrix(int*** mas, unsigned n) {
 	mas = nullptr;
 }
 
+// нахождение количества чисел с заданным значением,
+// хранящихся в заданной строке матрицы
+// mas - указатель на матрицу
+// n - количество строк
+// m - количество столбцов
+// value - значение для подсчета
+// numRow - номер строки для подсчета количества значений
+unsigned countValueInRow(int** mas, unsigned n, unsigned m, int value, unsigned numRow)
+{
+	if (mas == nullptr) return 0;
+	if (numRow < 0 || numRow >= n)
+		return 0;
+	unsigned count = 0;
+	for (unsigned i = 0; i < m; i++)
+		count += (mas[numRow][i] == value);
+	return count;
+}
+
+// нахождение количества чисел с заданным значением,
+// // хранящихся в заданном столбце матрицы
+// // mas - указатель на матрицу
+// // n - количество строк
+// // m - количество столбцов
+// // value - значение для подсчета
+// // numCol - номер столбца для подсчета количества значений
+unsigned countValueInCol(int** mas, unsigned n, unsigned m, int value, unsigned numCol) {
+	if (mas == nullptr) return 0;
+	if (numCol < 0 || numCol >= m) return 0; unsigned count = 0;
+	for (unsigned i = 0; i < n; i++)count += (mas[i][numCol] == value);
+	return count;
+}
+
 // основная программа
 int main()
 {
